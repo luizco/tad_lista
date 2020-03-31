@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "tad.h"
+#include "tad_lista.h"
 
 void insere(Lista **lista, int valor) {
 

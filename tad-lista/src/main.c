@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "tad.h"
+#include "tad_lista.h"
 
 int main(void) {
 
@@ -13,5 +13,5 @@ int main(void) {
 
 	imprime(lista);
 	libera(lista);
-	//free(lista);
+
 }
