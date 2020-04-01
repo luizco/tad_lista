@@ -6,10 +6,10 @@ int main(void) {
 
 	Lista* lista = NULL;
 
-	insere(&lista,2);
-	insere(&lista,4);
-	insere(&lista,8);
-	insere(&lista,9);
+	insereIten(&lista,2);
+	insereIten(&lista,4);
+	insereIten(&lista,8);
+	insereIten(&lista,9);
 
 	imprime(lista);
 	libera(lista);

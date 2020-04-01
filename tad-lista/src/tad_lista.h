@@ -6,7 +6,9 @@ typedef struct nodo{
 
 typedef struct nodo Lista;
 
-void insere( Lista** lista, int valor);
+void insereIten( Lista** lista, int valor);
+
+void removeIten( Lista* lista, int valor);
 
 void imprime( Lista *lista);
 

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "tad_lista.h"
 
-void insere(Lista **lista, int valor) {
+void insereIten(Lista **lista, int valor) {
 
 	if ((*lista) == NULL) {
 		(*lista) = (Lista*) malloc(sizeof(Lista));
@@ -18,6 +18,22 @@ void insere(Lista **lista, int valor) {
 
 	}
 
+}
+
+void removeIten( Lista* lista, int valor){
+
+	Celula *p;
+
+	if( lista != NULL){
+
+		p = lista;
+
+		while( p != NULL && p->valor != valor){
+
+
+			p = p->prox; // avancando para a proxima celula
+		}
+	}
 }
 
 void imprime(Lista *lista) {
