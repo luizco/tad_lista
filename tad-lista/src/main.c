@@ -8,8 +8,8 @@ int main(void) {
 
 	insereIten(&lista,2);
 	insereIten(&lista,4);
-	insereIten(&lista,8);
-	insereIten(&lista,9);
+	insereIten(&lista,3);
+	insereIten(&lista,18);
 
 	imprime(lista);
 	libera(lista);
