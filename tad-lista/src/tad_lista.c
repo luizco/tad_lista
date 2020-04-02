@@ -49,12 +49,6 @@ void imprime(Lista *lista) {
 void libera(Lista **lista) {
 	Celula *p, *temp;
 
-	/*for (p = lista; p != NULL; p = p->prox) {
-	 temp = p;
-	 p = p->prox;
-	 free(temp);
-	 }*/
-
 	p = (*lista);
 	while (p != NULL) {
 		temp = p;
