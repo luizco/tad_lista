@@ -10,35 +10,30 @@ void insereIten(Lista **lista, int valor) {
 		(*lista)->valor = valor;
 
 	} else {
-		/*Celula *temp;
-		 temp = malloc(sizeof(Celula));
-		 temp->valor = valor;
-		 temp->prox = (*lista)->prox;
-		 (*lista)->prox = temp;*/
+
 		Celula *temp, *aux;
+		for (aux = (*lista); aux->prox != NULL; aux = aux->prox);
+
 		temp = malloc(sizeof(Celula));
+		temp->prox = NULL;
 		temp->valor = valor;
-
-		for( aux = (*lista); aux->prox != NULL; aux = aux->prox);
-
 		aux->prox = temp;
-
 	}
 
 }
 
 void removeIten(Lista *lista, int valor) {
 
-	Celula *p;
+	Celula *p, *temp;
 
 	if (lista != NULL) {
 
-		p = lista;
+		for (p = lista; p != NULL && p->prox->valor != valor; p = p->prox)
+			;
 
-		while (p != NULL && p->valor != valor) {
-
-			p = p->prox; // avancando para a proxima celula
-		}
+		temp = p->prox;
+		p->prox = p->prox->prox;
+		free(temp);
 	}
 }
 
@@ -51,14 +46,20 @@ void imprime(Lista *lista) {
 
 }
 
-void libera(Lista *lista) {
+void libera(Lista **lista) {
 	Celula *p, *temp;
 
-	for (p = lista; p != NULL; p = p->prox) {
+	/*for (p = lista; p != NULL; p = p->prox) {
+	 temp = p;
+	 p = p->prox;
+	 free(temp);
+	 }*/
+
+	p = (*lista);
+	while (p != NULL) {
 		temp = p;
 		p = p->prox;
 		free(temp);
-
 	}
 
 }

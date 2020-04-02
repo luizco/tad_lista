@@ -12,4 +12,4 @@ void removeIten( Lista* lista, int valor);
 
 void imprime( Lista *lista);
 
-void libera(Lista *lista);
+void libera(Lista **lista);

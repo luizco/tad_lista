@@ -11,7 +11,14 @@ int main(void) {
 	insereIten(&lista,3);
 	insereIten(&lista,18);
 
+	removeIten(lista,3);
+
 	imprime(lista);
-	libera(lista);
+
+	insereIten(&lista,3);
+
+	imprime(lista);
+
+	libera(&lista);
 
 }
