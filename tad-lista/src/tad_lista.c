@@ -28,8 +28,7 @@ void removeIten(Lista *lista, int valor) {
 
 	if (lista != NULL) {
 
-		for (p = lista; p != NULL && p->prox->valor != valor; p = p->prox)
-			;
+		for (p = lista; p != NULL && p->prox->valor != valor; p = p->prox);
 
 		temp = p->prox;
 		p->prox = p->prox->prox;
